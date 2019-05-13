@@ -10,6 +10,8 @@ target 'KakaoApp' do
   pod 'RxViewController'
   pod 'SwiftLint'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'ReactorKit'
+  pod 'RxAlamofire'
 
   target 'KakaoAppTests' do
     inherit! :search_paths

@@ -109,12 +109,9 @@
 		9922390C2289716400A2B76A /* KakaoApp */ = {
 			isa = PBXGroup;
 			children = (
-				9922390D2289716400A2B76A /* AppDelegate.swift */,
-				9922390F2289716400A2B76A /* GalleryViewController.swift */,
-				992239112289716400A2B76A /* Main.storyboard */,
+				9922392F22897EBE00A2B76A /* SupportingFiles */,
+				9922392E22897E9E00A2B76A /* View */,
 				992239142289716800A2B76A /* Assets.xcassets */,
-				992239162289716800A2B76A /* LaunchScreen.storyboard */,
-				992239192289716800A2B76A /* Info.plist */,
 			);
 			path = KakaoApp;
 			sourceTree = "<group>";
@@ -126,6 +123,25 @@
 				992239242289716800A2B76A /* Info.plist */,
 			);
 			path = KakaoAppTests;
+			sourceTree = "<group>";
+		};
+		9922392E22897E9E00A2B76A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9922390F2289716400A2B76A /* GalleryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9922392F22897EBE00A2B76A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				992239112289716400A2B76A /* Main.storyboard */,
+				992239162289716800A2B76A /* LaunchScreen.storyboard */,
+				992239192289716800A2B76A /* Info.plist */,
+				9922390D2289716400A2B76A /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +293,9 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KakaoApp/Pods-KakaoApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -287,6 +306,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -493,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ELQH5H3HB;
-				INFOPLIST_FILE = KakaoApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KakaoApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,7 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ELQH5H3HB;
-				INFOPLIST_FILE = KakaoApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/KakaoApp/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
