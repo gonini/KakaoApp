@@ -1,0 +1,38 @@
+PODS:
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
+  - RxViewController (0.4.1):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - SnapKit (5.0.0)
+  - SwiftLint (0.32.0)
+
+DEPENDENCIES:
+  - RxCocoa (~> 4.0)
+  - RxViewController
+  - SnapKit (~> 5.0.0)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - RxViewController
+    - SnapKit
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
+  RxViewController: e93e7c233d5b5b62c32231d69726d55f54081bc6
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+
+PODFILE CHECKSUM: a15f089aa25638d51e426b611deaafdf28b2b3d4
+
+COCOAPODS: 1.6.0.beta.2
