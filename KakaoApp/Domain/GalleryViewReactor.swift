@@ -22,7 +22,7 @@ final class GalleyViewReactor: Reactor {
     }
     
     enum Action {
-        case viewDidLoad
+        case viewWillAppear
     }
     
     enum Mutation {
@@ -40,7 +40,7 @@ final class GalleyViewReactor: Reactor {
    
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-            case .viewDidLoad:
+            case .viewWillAppear:
                 return .just(.loadGalleyImage)
         }
     }

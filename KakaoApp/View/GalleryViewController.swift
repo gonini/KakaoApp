@@ -71,8 +71,8 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
 extension GalleryViewController: StoryboardView {
   
     func bind(reactor: GalleyViewReactor) {
-        rx.viewDidLoad
-            .map { _ in Reactor.Action.viewDidLoad }
+        rx.viewWillAppear
+            .map { _ in Reactor.Action.viewWillAppear }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
