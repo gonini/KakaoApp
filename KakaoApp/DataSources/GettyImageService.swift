@@ -15,13 +15,24 @@ struct GettyImageService: GalleyImagesService {
     
     private static let baseUrl = "https://www.gettyimagesgallery.com/collection/sasha/"
     
+    private let gettyImageSubject = PublishSubject<[URL]>()
+    private var disposeBag: DisposeBag = .init()
+    
     func observeImages() -> Observable<[URL]> {
-        return RxAlamofire
+        return gettyImageSubject
+    }
+    
+    func requestImages() {
+        RxAlamofire
             .requestString(.get, GettyImageService.baseUrl)
             .map { $0.1 }
             .map { self.parseGettyImage(response: $0) }
-         .asObservable()
-        
+            .do(onNext: { url in
+                self.gettyImageSubject.onNext(url)
+            })
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .subscribe()
+            .disposed(by: disposeBag)
     }
     
     private func parseGettyImage(response: String) -> [URL] {

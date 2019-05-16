@@ -20,6 +20,9 @@
 		99223939228D449E00A2B76A /* GalleyImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223938228D449E00A2B76A /* GalleyImageService.swift */; };
 		9922393B228D454A00A2B76A /* GettyImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922393A228D454A00A2B76A /* GettyImageService.swift */; };
 		99223957228D603F00A2B76A /* GettyImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223956228D603F00A2B76A /* GettyImageServiceTests.swift */; };
+		9922395F228D72ED00A2B76A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922395E228D72ED00A2B76A /* ImageCache.swift */; };
+		99223962228D78C000A2B76A /* ImageDownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223961228D78C000A2B76A /* ImageDownloadService.swift */; };
+		99223964228D798900A2B76A /* DownSamplingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223963228D798900A2B76A /* DownSamplingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		99223954228D603F00A2B76A /* KakaoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99223956228D603F00A2B76A /* GettyImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettyImageServiceTests.swift; sourceTree = "<group>"; };
 		99223958228D603F00A2B76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9922395E228D72ED00A2B76A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		99223961228D78C000A2B76A /* ImageDownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadService.swift; sourceTree = "<group>"; };
+		99223963228D798900A2B76A /* DownSamplingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownSamplingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +160,10 @@
 		99223934228D406300A2B76A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				99223960228D73EB00A2B76A /* Cache */,
 				99223935228D408000A2B76A /* GalleryViewReactor.swift */,
 				99223938228D449E00A2B76A /* GalleyImageService.swift */,
+				99223961228D78C000A2B76A /* ImageDownloadService.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				9922393A228D454A00A2B76A /* GettyImageService.swift */,
+				99223963228D798900A2B76A /* DownSamplingService.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -175,6 +184,14 @@
 				99223958228D603F00A2B76A /* Info.plist */,
 			);
 			path = KakaoAppTests;
+			sourceTree = "<group>";
+		};
+		99223960228D73EB00A2B76A /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				9922395E228D72ED00A2B76A /* ImageCache.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,10 +409,13 @@
 			files = (
 				9922393B228D454A00A2B76A /* GettyImageService.swift in Sources */,
 				99223933228D403100A2B76A /* CompositionRoot.swift in Sources */,
+				9922395F228D72ED00A2B76A /* ImageCache.swift in Sources */,
 				992239102289716400A2B76A /* GalleryViewController.swift in Sources */,
+				99223962228D78C000A2B76A /* ImageDownloadService.swift in Sources */,
 				99223931228D339B00A2B76A /* GalleyImageCell.swift in Sources */,
 				99223936228D408000A2B76A /* GalleryViewReactor.swift in Sources */,
 				9922390E2289716400A2B76A /* AppDelegate.swift in Sources */,
+				99223964228D798900A2B76A /* DownSamplingService.swift in Sources */,
 				99223939228D449E00A2B76A /* GalleyImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ELQH5H3HB;
 				INFOPLIST_FILE = "$(SRCROOT)/KakaoApp/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,6 +602,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ELQH5H3HB;
 				INFOPLIST_FILE = "$(SRCROOT)/KakaoApp/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,5 +10,7 @@ import Foundation
 import RxSwift
 
 protocol GalleyImagesService {
+    
     func observeImages() -> Observable<[URL]>
+    func requestImages()
 }

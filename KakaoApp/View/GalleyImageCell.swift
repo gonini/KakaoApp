@@ -8,16 +8,21 @@
 
 import UIKit
 import SnapKit
+import ImageIO
 
 final class GalleyImageCell: UICollectionViewCell {
     
-    private let galleyImage: UIImageView = {
+    private static let dummyImage = UIImage(named: "loading_image")
+    
+    private let galleyImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "test")
-        imageView.contentMode = .scaleAspectFill
+        imageView.image = GalleyImageCell.dummyImage
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    private var currentImageUrl: URL?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,9 +33,24 @@ final class GalleyImageCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setImage(url: URL) {
+        currentImageUrl = url
+        galleyImageView.image = GalleyImageCell.dummyImage
+        DispatchQueue.global().async {
+            let image = DownSamplingService.share.donwload(with: url)
+            
+            DispatchQueue.main.async {
+                guard self.currentImageUrl! == url else {
+                    return
+                }
+                self.galleyImageView.image = image
+            }
+        }
+    }
+    
     private func addView() {
-        addSubview(galleyImage)
-        galleyImage.snp.makeConstraints { make in
+        addSubview(galleyImageView)
+        galleyImageView.snp.makeConstraints { make in
             make.left.right.bottom.top.equalTo(self)
         }
     }

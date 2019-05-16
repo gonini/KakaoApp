@@ -10,18 +10,21 @@ import UIKit
 import SnapKit
 import ReactorKit
 import RxSwift
+import RxViewController
 
 final class GalleryViewController: UIViewController {
     
     var disposeBag: DisposeBag = .init()
-    
+    private var galleryCollectionView: UICollectionView!
+    private var galleyContents = [URL]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addView()
     }
     
     private func addView() {
-        let galleryCollectionView: UICollectionView = {
+        galleryCollectionView = {
             let collectionViewLayout: UICollectionViewFlowLayout = {
                 let layout = UICollectionViewFlowLayout()
                 layout.itemSize = .init(width: 100, height: 100)
@@ -48,24 +51,37 @@ final class GalleryViewController: UIViewController {
 extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return galleyContents.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GelleryViewKey.imageCellIdentifier,
                                                       for: indexPath)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        guard let galleyImageCell = cell as? GalleyImageCell else {
+            return cell
+        }
+        
+        galleyImageCell.setImage(url: galleyContents[indexPath.row])
+        
+        return galleyImageCell
     }
 }
 
 extension GalleryViewController: StoryboardView {
   
     func bind(reactor: GalleyViewReactor) {
-        _ = 4
+        rx.viewDidLoad
+            .map { _ in Reactor.Action.viewDidLoad }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        reactor.state.map { $0.galleyContents }
+            .subscribe(onNext: { [weak self] in
+                guard let `self` = self else { return }
+                self.galleyContents = $0
+                self.galleryCollectionView?.reloadData()
+            }).disposed(by: disposeBag)
     }
 }
 

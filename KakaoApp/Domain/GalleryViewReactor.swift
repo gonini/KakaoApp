@@ -8,6 +8,7 @@
 
 import Foundation
 import ReactorKit
+import RxSwift
 
 final class GalleyViewReactor: Reactor {
     
@@ -21,7 +22,43 @@ final class GalleyViewReactor: Reactor {
     }
     
     enum Action {
+        case viewDidLoad
+    }
+    
+    enum Mutation {
+        case loadGalleyImage
+        case galleryImageLoaded(with: [URL])
+    }
+   
+    func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
+        let galleyImageObservable = galleyImageService
+            .observeImages()
+            .map(Mutation.galleryImageLoaded)
         
+        return .merge(mutation, galleyImageObservable)
+    }
+   
+    func mutate(action: Action) -> Observable<Mutation> {
+        switch action {
+            case .viewDidLoad:
+                return .just(.loadGalleyImage)
+        }
+    }
+    
+    func reduce(state: State, mutation: Mutation) -> State {
+        var newState = state
+        
+        switch mutation {
+        case .loadGalleyImage:
+            newState.isbusy = true
+            galleyImageService.requestImages()
+            return newState
+            
+        case let .galleryImageLoaded(with):
+            newState.isbusy = false
+            newState.galleyContents = with
+            return newState
+        }
     }
     
     struct State {

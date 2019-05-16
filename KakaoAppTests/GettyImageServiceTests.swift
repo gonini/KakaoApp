@@ -18,6 +18,6 @@ class GettyImageServiceTests: XCTestCase {
         let service = GettyImageService()
         let expected = URL(string: "https://www.gettyimagesgallery.com/wp-content/uploads/2018/12/GettyImages-3360485-1024x802.jpg")
         
-        XCTAssertEqual(try service.observeImages().toBlocking().first()?.first, expected)
+        XCTAssertEqual(try service.requestImages().toBlocking().first()?.first, expected)
     }
 }

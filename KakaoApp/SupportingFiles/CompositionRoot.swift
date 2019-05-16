@@ -14,12 +14,17 @@ extension SwinjectStoryboard {
     
     @objc class func setup() {
         
-        defaultContainer.register(GettyImageService.self) { container in
+        defaultContainer.register(GalleyImagesService.self) { container in
             return GettyImageService()
         }
         
-        defaultContainer.storyboardInitCompleted(GalleryViewController.self) { container, resolver in
-            resolver.reactor = container.resolve(GalleyViewReactor.self)
+        defaultContainer.register(GalleyViewReactor.self) { container in
+            return GalleyViewReactor(galleyImageService: container.resolve(GalleyImagesService.self)!)
         }
+        
+        defaultContainer.storyboardInitCompleted(GalleryViewController.self) { container, resolver in
+            resolver.reactor = container.resolve(GalleyViewReactor.self)!
+        }
+        
     }
 }
