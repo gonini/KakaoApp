@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - Kanna (4.0.3)
   - ReactorKit (1.2.1):
     - RxSwift (>= 4.0.0)
   - RxAlamofire (4.4.0):
@@ -8,6 +9,8 @@ PODS:
     - Alamofire (~> 4.8)
     - RxSwift (~> 4.4)
   - RxAtomic (4.4.2)
+  - RxBlocking (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxCocoa (4.4.2):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.4.2):
@@ -17,38 +20,53 @@ PODS:
     - RxSwift (>= 4.0.0)
   - SnapKit (5.0.0)
   - SwiftLint (0.32.0)
+  - Swinject (2.6.0)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
+  - Kanna (~> 4.0.0)
   - ReactorKit
   - RxAlamofire
+  - RxBlocking
   - RxCocoa (~> 4.0)
   - RxViewController
   - SnapKit (~> 5.0.0)
   - SwiftLint
+  - Swinject
+  - SwinjectStoryboard
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Kanna
     - ReactorKit
     - RxAlamofire
     - RxAtomic
+    - RxBlocking
     - RxCocoa
     - RxSwift
     - RxViewController
     - SnapKit
     - SwiftLint
+    - Swinject
+    - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kanna: 0ebbdd0e7e3308f0aafbd569e79c8cadc5eb877c
   ReactorKit: 8be57f0527ad1ac2963cd5c338274a46a01e57a3
   RxAlamofire: ecc5e458ee11250938d23360179eb3a37cd3ee1e
   RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxBlocking: 79413e4d916f44bb3e113c5b2cc059e36fe58910
   RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
   RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
   RxViewController: e93e7c233d5b5b62c32231d69726d55f54081bc6
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 63fb4e35571a7ba5edc4c2c736f1e8bb6fba568a
+PODFILE CHECKSUM: ba1e08c53deeff00d7411fe932d6996e93172c0b
 
 COCOAPODS: 1.6.0.beta.2

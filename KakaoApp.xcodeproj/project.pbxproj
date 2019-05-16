@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F7832408D4CE1830A6C0E07 /* Pods_KakaoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3EEA19FB971F8DB5F5918E /* Pods_KakaoAppTests.framework */; };
+		653B58E23705072A288295E5 /* Pods_KakaoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3EEA19FB971F8DB5F5918E /* Pods_KakaoAppTests.framework */; };
 		66EF9D780BAB9C04BF75C9C5 /* Pods_KakaoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A28650C8678DB12647AE72C /* Pods_KakaoApp.framework */; };
 		9922390E2289716400A2B76A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922390D2289716400A2B76A /* AppDelegate.swift */; };
 		992239102289716400A2B76A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922390F2289716400A2B76A /* GalleryViewController.swift */; };
 		992239132289716400A2B76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992239112289716400A2B76A /* Main.storyboard */; };
 		992239152289716800A2B76A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992239142289716800A2B76A /* Assets.xcassets */; };
 		992239182289716800A2B76A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992239162289716800A2B76A /* LaunchScreen.storyboard */; };
-		992239232289716800A2B76A /* KakaoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992239222289716800A2B76A /* KakaoAppTests.swift */; };
 		99223931228D339B00A2B76A /* GalleyImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223930228D339B00A2B76A /* GalleyImageCell.swift */; };
+		99223933228D403100A2B76A /* CompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223932228D403100A2B76A /* CompositionRoot.swift */; };
+		99223936228D408000A2B76A /* GalleryViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223935228D408000A2B76A /* GalleryViewReactor.swift */; };
+		99223939228D449E00A2B76A /* GalleyImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223938228D449E00A2B76A /* GalleyImageService.swift */; };
+		9922393B228D454A00A2B76A /* GettyImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9922393A228D454A00A2B76A /* GettyImageService.swift */; };
+		99223957228D603F00A2B76A /* GettyImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99223956228D603F00A2B76A /* GettyImageServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9922391F2289716800A2B76A /* PBXContainerItemProxy */ = {
+		99223959228D603F00A2B76A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 992239022289716400A2B76A /* Project object */;
 			proxyType = 1;
@@ -42,10 +46,15 @@
 		992239142289716800A2B76A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		992239172289716800A2B76A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		992239192289716800A2B76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9922391E2289716800A2B76A /* KakaoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		992239222289716800A2B76A /* KakaoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAppTests.swift; sourceTree = "<group>"; };
-		992239242289716800A2B76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99223930228D339B00A2B76A /* GalleyImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleyImageCell.swift; sourceTree = "<group>"; };
+		99223932228D403100A2B76A /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
+		99223935228D408000A2B76A /* GalleryViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewReactor.swift; sourceTree = "<group>"; };
+		99223938228D449E00A2B76A /* GalleyImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleyImageService.swift; sourceTree = "<group>"; };
+		9922393A228D454A00A2B76A /* GettyImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettyImageService.swift; sourceTree = "<group>"; };
+		9922394E228D5F9000A2B76A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		99223954228D603F00A2B76A /* KakaoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KakaoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99223956228D603F00A2B76A /* GettyImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettyImageServiceTests.swift; sourceTree = "<group>"; };
+		99223958228D603F00A2B76A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +66,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9922391B2289716800A2B76A /* Frameworks */ = {
+		99223951228D603F00A2B76A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F7832408D4CE1830A6C0E07 /* Pods_KakaoAppTests.framework in Frameworks */,
+				653B58E23705072A288295E5 /* Pods_KakaoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +80,7 @@
 		18297CF282944F96D818E01D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9922394E228D5F9000A2B76A /* XCTest.framework */,
 				1A28650C8678DB12647AE72C /* Pods_KakaoApp.framework */,
 				4C3EEA19FB971F8DB5F5918E /* Pods_KakaoAppTests.framework */,
 			);
@@ -92,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9922390C2289716400A2B76A /* KakaoApp */,
-				992239212289716800A2B76A /* KakaoAppTests */,
+				99223955228D603F00A2B76A /* KakaoAppTests */,
 				9922390B2289716400A2B76A /* Products */,
 				45E25C8EC16A87885763292F /* Pods */,
 				18297CF282944F96D818E01D /* Frameworks */,
@@ -103,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9922390A2289716400A2B76A /* KakaoApp.app */,
-				9922391E2289716800A2B76A /* KakaoAppTests.xctest */,
+				99223954228D603F00A2B76A /* KakaoAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,18 +123,11 @@
 			children = (
 				9922392F22897EBE00A2B76A /* SupportingFiles */,
 				9922392E22897E9E00A2B76A /* View */,
+				99223934228D406300A2B76A /* Domain */,
+				99223937228D43FC00A2B76A /* DataSources */,
 				992239142289716800A2B76A /* Assets.xcassets */,
 			);
 			path = KakaoApp;
-			sourceTree = "<group>";
-		};
-		992239212289716800A2B76A /* KakaoAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				992239222289716800A2B76A /* KakaoAppTests.swift */,
-				992239242289716800A2B76A /* Info.plist */,
-			);
-			path = KakaoAppTests;
 			sourceTree = "<group>";
 		};
 		9922392E22897E9E00A2B76A /* View */ = {
@@ -143,8 +146,35 @@
 				992239162289716800A2B76A /* LaunchScreen.storyboard */,
 				992239192289716800A2B76A /* Info.plist */,
 				9922390D2289716400A2B76A /* AppDelegate.swift */,
+				99223932228D403100A2B76A /* CompositionRoot.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		99223934228D406300A2B76A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				99223935228D408000A2B76A /* GalleryViewReactor.swift */,
+				99223938228D449E00A2B76A /* GalleyImageService.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		99223937228D43FC00A2B76A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				9922393A228D454A00A2B76A /* GettyImageService.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		99223955228D603F00A2B76A /* KakaoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				99223956228D603F00A2B76A /* GettyImageServiceTests.swift */,
+				99223958228D603F00A2B76A /* Info.plist */,
+			);
+			path = KakaoAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,23 +200,23 @@
 			productReference = 9922390A2289716400A2B76A /* KakaoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9922391D2289716800A2B76A /* KakaoAppTests */ = {
+		99223953228D603F00A2B76A /* KakaoAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9922392A2289716800A2B76A /* Build configuration list for PBXNativeTarget "KakaoAppTests" */;
+			buildConfigurationList = 9922395B228D603F00A2B76A /* Build configuration list for PBXNativeTarget "KakaoAppTests" */;
 			buildPhases = (
-				F9D98DE8A882E4E9B154D00D /* [CP] Check Pods Manifest.lock */,
-				9922391A2289716800A2B76A /* Sources */,
-				9922391B2289716800A2B76A /* Frameworks */,
-				9922391C2289716800A2B76A /* Resources */,
+				1F288F1A6F9B553837C3AFAC /* [CP] Check Pods Manifest.lock */,
+				99223950228D603F00A2B76A /* Sources */,
+				99223951228D603F00A2B76A /* Frameworks */,
+				99223952228D603F00A2B76A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				992239202289716800A2B76A /* PBXTargetDependency */,
+				9922395A228D603F00A2B76A /* PBXTargetDependency */,
 			);
 			name = KakaoAppTests;
 			productName = KakaoAppTests;
-			productReference = 9922391E2289716800A2B76A /* KakaoAppTests.xctest */;
+			productReference = 99223954228D603F00A2B76A /* KakaoAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -202,7 +232,7 @@
 					992239092289716400A2B76A = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					9922391D2289716800A2B76A = {
+					99223953228D603F00A2B76A = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 992239092289716400A2B76A;
 					};
@@ -222,7 +252,7 @@
 			projectRoot = "";
 			targets = (
 				992239092289716400A2B76A /* KakaoApp */,
-				9922391D2289716800A2B76A /* KakaoAppTests */,
+				99223953228D603F00A2B76A /* KakaoAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +268,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9922391C2289716800A2B76A /* Resources */ = {
+		99223952228D603F00A2B76A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -248,6 +278,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F288F1A6F9B553837C3AFAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KakaoAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8ED8E1F98D7EF836248D402C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,52 +349,38 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KakaoApp/Pods-KakaoApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KakaoApp/Pods-KakaoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F9D98DE8A882E4E9B154D00D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KakaoAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -352,27 +390,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9922393B228D454A00A2B76A /* GettyImageService.swift in Sources */,
+				99223933228D403100A2B76A /* CompositionRoot.swift in Sources */,
 				992239102289716400A2B76A /* GalleryViewController.swift in Sources */,
 				99223931228D339B00A2B76A /* GalleyImageCell.swift in Sources */,
+				99223936228D408000A2B76A /* GalleryViewReactor.swift in Sources */,
 				9922390E2289716400A2B76A /* AppDelegate.swift in Sources */,
+				99223939228D449E00A2B76A /* GalleyImageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9922391A2289716800A2B76A /* Sources */ = {
+		99223950228D603F00A2B76A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				992239232289716800A2B76A /* KakaoAppTests.swift in Sources */,
+				99223957228D603F00A2B76A /* GettyImageServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		992239202289716800A2B76A /* PBXTargetDependency */ = {
+		9922395A228D603F00A2B76A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 992239092289716400A2B76A /* KakaoApp */;
-			targetProxy = 9922391F2289716800A2B76A /* PBXContainerItemProxy */;
+			targetProxy = 99223959228D603F00A2B76A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -550,11 +592,10 @@
 			};
 			name = Release;
 		};
-		9922392B2289716800A2B76A /* Debug */ = {
+		9922395C228D603F00A2B76A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51F4F1E892F04B3778A186DB /* Pods-KakaoAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ELQH5H3HB;
@@ -572,11 +613,10 @@
 			};
 			name = Debug;
 		};
-		9922392C2289716800A2B76A /* Release */ = {
+		9922395D228D603F00A2B76A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B9F446602EECD06FDA89B74 /* Pods-KakaoAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ELQH5H3HB;
@@ -615,11 +655,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9922392A2289716800A2B76A /* Build configuration list for PBXNativeTarget "KakaoAppTests" */ = {
+		9922395B228D603F00A2B76A /* Build configuration list for PBXNativeTarget "KakaoAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9922392B2289716800A2B76A /* Debug */,
-				9922392C2289716800A2B76A /* Release */,
+				9922395C228D603F00A2B76A /* Debug */,
+				9922395D228D603F00A2B76A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

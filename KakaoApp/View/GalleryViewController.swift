@@ -8,8 +8,12 @@
 
 import UIKit
 import SnapKit
+import ReactorKit
+import RxSwift
 
-class GalleryViewController: UIViewController {
+final class GalleryViewController: UIViewController {
+    
+    var disposeBag: DisposeBag = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +59,13 @@ extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+}
+
+extension GalleryViewController: StoryboardView {
+  
+    func bind(reactor: GalleyViewReactor) {
+        _ = 4
     }
 }
 

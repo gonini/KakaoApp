@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class GalleyImageCell: UICollectionViewCell {
+final class GalleyImageCell: UICollectionViewCell {
     
     private let galleyImage: UIImageView = {
         let imageView = UIImageView()
@@ -34,5 +34,4 @@ class GalleyImageCell: UICollectionViewCell {
             make.left.right.bottom.top.equalTo(self)
         }
     }
-    
 }
