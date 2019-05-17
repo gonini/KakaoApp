@@ -27,13 +27,14 @@ final class GalleryViewController: UIViewController {
         galleryCollectionView = {
             let collectionViewLayout: UICollectionViewFlowLayout = {
                 let layout = UICollectionViewFlowLayout()
-                layout.itemSize = .init(width: 100, height: 100)
+                layout.itemSize = .init(width: 150, height: 150)
                 return layout
             }()
             
             let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
             view.delegate = self
             view.dataSource = self
+            view.prefetchDataSource = self
             view.backgroundColor = .clear
             view.register(GalleyImageCell.self, forCellWithReuseIdentifier: GelleryViewKey.imageCellIdentifier)
             return view
@@ -45,26 +46,40 @@ final class GalleryViewController: UIViewController {
             make.left.right.top.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
     }
-  
-}
-
-extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return galleyContents.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    private func resolveGalleyImageCell(_ collectionView: UICollectionView,
+                                        cellForItemAt indexPath: IndexPath) -> GalleyImageCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GelleryViewKey.imageCellIdentifier,
                                                       for: indexPath)
         
         guard let galleyImageCell = cell as? GalleyImageCell else {
-            return cell
+            fatalError()
         }
         
-        galleyImageCell.setImage(url: galleyContents[indexPath.row])
-        
         return galleyImageCell
+    }
+}
+
+extension GalleryViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDataSourcePrefetching {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return galleyContents.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = resolveGalleyImageCell(collectionView, cellForItemAt: indexPath)
+        cell.setImage(url: galleyContents[indexPath.row])
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            let cell = resolveGalleyImageCell(collectionView, cellForItemAt: indexPath)
+            cell.setImage(url: galleyContents[indexPath.row])
+        }
     }
 }
 

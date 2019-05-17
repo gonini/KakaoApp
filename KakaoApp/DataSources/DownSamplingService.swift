@@ -35,6 +35,7 @@ final class DownSamplingService: ImageDownloadService {
             
             return ret
         }
+        
         return cachedImage.data
     }
 }
