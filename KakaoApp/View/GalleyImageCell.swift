@@ -34,16 +34,21 @@ final class GalleyImageCell: UICollectionViewCell {
     }
     
     func setImage(url: URL) {
+        guard currentImageUrl != url else {
+            return
+        }
         currentImageUrl = url
         galleyImageView.image = GalleyImageCell.dummyImage
+        galleyImageView.setNeedsDisplay()
         DispatchQueue.global().async {
             let image = DownSamplingService.share.donwload(with: url)
             
             DispatchQueue.main.async {
-                guard self.currentImageUrl! == url else {
+                guard self.currentImageUrl == url else {
                     return
                 }
                 self.galleyImageView.image = image
+                self.galleyImageView.setNeedsDisplay()
             }
         }
     }

@@ -34,7 +34,7 @@ final class GalleryViewController: UIViewController {
             let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
             view.delegate = self
             view.dataSource = self
-            view.prefetchDataSource = self
+            //view.prefetchDataSource = self
             view.backgroundColor = .clear
             view.register(GalleyImageCell.self, forCellWithReuseIdentifier: GelleryViewKey.imageCellIdentifier)
             return view
